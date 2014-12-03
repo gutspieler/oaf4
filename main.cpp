@@ -2,7 +2,7 @@
 #include "student.h"
 #include "studentenor.h"
 #include "studentdecide.h"
-#include "StudentSummation.h"
+#include "studentsummation.h"
 
 using namespace std;
 
@@ -12,6 +12,8 @@ int main()
     StudentDecide decide;
     StudentEnor studentenor("input.txt");
     bool istrue=false;
+
+   // for(studentenor.First(); !studentenor.End(); studentenor.Next())cout<<studentenor.Current().average<<endl;
 
     decide.AddEnumerator(&studentenor);
     decide.Run();

@@ -3,8 +3,9 @@
 #include <iostream>
 #include "enumerator.hpp"
 #include "seqinfileenumerator.hpp"
-#include "StudentSummation.h"
+#include "studentsummation.h"
 
+//neptunkódokat és hozzájuk tartozó átlagot felsoroló típus 
 class StudentEnor : public Enumerator<Student>
 {
 protected:
@@ -13,11 +14,11 @@ protected:
     bool end;
 
 public:
-    StudentEnor(const std::string& neptun)
+    StudentEnor(const std::string& file)
     {
         try
         {
-            seqenor = new SeqInFileEnumerator<Student>(neptun);
+            seqenor = new SeqInFileEnumerator<Student>(file);
         }
         catch (SeqInFileEnumerator<std::string>::Exceptions ex)
         {

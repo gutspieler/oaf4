@@ -3,7 +3,12 @@
 #include "student.h"
 #include "summation.hpp"
 
-class StudentSummation : public Summation<Student,Student> //szummázza az egyes diákok jegyeit
+
+//Tevékenység: Meghatározza az adott neptunkódhoz tartozó átlagot.
+//Bemenet:Student
+//Kimenet:Student
+
+class StudentSummation : public Summation<Student,Student> 
 {
 public:
     StudentSummation(const Student &x) : Summation<Student,Student>(), student(x) {}
